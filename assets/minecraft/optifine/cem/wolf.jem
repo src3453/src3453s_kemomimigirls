@@ -49,7 +49,7 @@
 			"part": "body",
 			"id": "body",
 			"invertAxis": "xy",
-			"translate": [0, 0, -14],
+			"translate": [0, 0, -8],
 			"submodels": [
 				{
 					"id": "body2",
