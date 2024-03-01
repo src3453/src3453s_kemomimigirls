@@ -44,7 +44,7 @@
 			"invertAxis": "xy",
 			"translate": [0, 0, 0]
 		},
-		{	
+		{
 			"part": "body",
 			"id": "body",
 			"invertAxis": "xy",
@@ -210,10 +210,20 @@
 					"body2.tz": "if(is_sitting,12,6)",
 					"LeftEar.rz": "torad(30) + sin(age * 0.1) * 0.1",
 					"RightEar.rz": "torad(-30) + sin(age * 0.08) * -0.1",
+					"Extra.rz": "sin(age * 0.06) * 0.05",
 					"body2.sx": 0.95,
 					"body2.sy": 0.95,
 					"body2.sz": 0.95
 				}
+			]
+		},
+		{
+			"part": "Extra",
+			"id": "Extra",
+			"invertAxis": "xy",
+			"translate": [0, -23.75, -10],
+			"boxes": [
+				{"coordinates": [-3.5, 24, 6, 7, 6, 0], "textureOffset": [50, 45]}
 			]
 		}
 	]

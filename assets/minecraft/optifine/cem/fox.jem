@@ -3,6 +3,12 @@
 	"textureSize": [64, 128],
 	"models": [
 		{
+			"part": "head",
+			"id": "head",
+			"invertAxis": "xy",
+			"translate": [0, -26, 0]
+		},
+		{
 			"part": "body",
 			"id": "body",
 			"invertAxis": "xy",
@@ -141,7 +147,8 @@
 							]
 						},
 						{
-							"id":"is_sleeping",
+							"id": "is_sleeping",
+							"invertAxis": "xy",
 							"translate": [0, 0, 0]
 						}
 					]
@@ -153,6 +160,9 @@
 					"body.rx": 0,
 					"body.ry": "torad(-90)*is_sleeping.tx",
 					"body.ty": "16",
+					"head.tx": "-1+head.ry*3.5",
+					"head.ty": "-1+if(is_sitting,7.5,-1.5)-head.rx*1.5",
+					"head.tz": "if(is_sitting,3,0)-head.rx*6",
 					"right_leg.rx": "0.75*leg1.rx+if(is_sitting,-0.5,0)",
 					"left_leg.rx": "0.75*leg2.rx+if(is_sitting,-0.5,0)",
 					"right_leg.ry": "if(is_sitting,0.05,0)",
@@ -164,9 +174,11 @@
 					"real_head.rx": "head.rx",
 					"real_head.ry": "clamp(head.ry,torad(-90),torad(90))+if(is_sleeping.tx == 1,torad(90),0)",
 					"real_head.rz": "head.rz",
-					"body2.ty": "if(is_sitting,-11.5,-20)+28",
+					"body2.ty": "if(is_sitting,-11.5,-20)+28+is_sleeping.tx*6",
+					"body2.tx": "is_sleeping.tx*6",
 					"LeftEar.rz": "torad(30) + sin(age * 0.1) * 0.1",
 					"RightEar.rz": "torad(-30) + sin(age * 0.08) * -0.1",
+					"Extra.rz": "sin(age * 0.06) * 0.05",
 					"body2.sx": 0.9,
 					"body2.sy": 0.9,
 					"body2.sz": 0.9
@@ -198,16 +210,19 @@
 			"translate": [0, 0, 0]
 		},
 		{
-			"part": "head",
-			"id": "head",
-			"invertAxis": "xy",
-			"translate": [0, -26, 2]
-		},
-		{
 			"part": "tail",
 			"id": "tail",
 			"invertAxis": "xy",
 			"translate": [0, 0, 0]
+		},
+		{
+			"part": "Extra",
+			"id": "Extra",
+			"invertAxis": "xy",
+			"translate": [0, -23.75, -10],
+			"boxes": [
+				{"coordinates": [-3.5, 24, 6, 7, 6, 0], "textureOffset": [50, 45]}
+			]
 		}
 	]
 }

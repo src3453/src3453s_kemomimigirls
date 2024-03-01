@@ -44,14 +44,15 @@ for head_name in heads:
                     if all(costume[y,x,:] == mask_colors[0]):
                         costume[y,x,:] = colors[color_name][0]
                     if all(costume[y,x,:] == mask_colors[1]):
-                        costume[y,x,:] = colors[color_name][0]
+                        costume[y,x,:] = np.clip(np.array(colors[color_name][0])*1.02,0,255)
                     if all(costume[y,x,:] == mask_colors[2]):
-                        costume[y,x,:] = colors[color_name][0]
+                        costume[y,x,:] = np.clip(np.array(colors[color_name][0])*0.98,0,255)
         costume = costume[:,:,[2,1,0,3]]
         result = head
         for y in range(result.shape[0]):
             for x in range(result.shape[1]):
                 if costume[y,x,3] != 0:
+                    costume[y,x,3] = 255
                     result[y,x,:] = costume[y,x,:]
         cv2.imwrite(os.path.join(OUTPUT_DIR,head_name.split(".")[0]+costume_name),result)
         print(head_name.split(".")[0]+costume_name)

@@ -1,6 +1,5 @@
 {
 	"credit": "Made with Blockbench",
-	"texture": "textures/entity/cat/heads/calico.png",
 	"textureSize": [64, 128],
 	"models": [
 		{
@@ -82,6 +81,14 @@
 												{"coordinates": [0.48019, 0.65888, -2.8707, 1, 4, 2], "textureOffset": [58, 5], "sizeAdd": 0.2}
 											]
 										}
+									]
+								},
+								{
+									"id": "Extra",
+									"invertAxis": "xy",
+									"translate": [0, 7.75, 0],
+									"boxes": [
+										{"coordinates": [-3.5, 0.25, 0, 7, 6, 0], "textureOffset": [50, 45]}
 									]
 								}
 							]
@@ -185,10 +192,11 @@
 					"real_tail2.ry": "tail.ry",
 					"real_head.rx": "head.rx",
 					"real_head.ry": "clamp(head.ry,torad(-90),torad(90))+if(is_sleeping.tx == 1,torad(90),0)",
-					"real_head.rz": "head.rz",
+					"real_head.rz": "head.rz + sin(age * 0.04) * (0.08 * if(is_tamed,1,0))",
 					"body2.ty": "if(is_sitting,-10,-20)+28",
 					"LeftEar.rz": "torad(30) + sin(age * 0.1) * 0.1",
 					"RightEar.rz": "torad(-30) + sin(age * 0.08) * -0.1",
+					"Extra.rz": "sin(age * 0.06) * 0.05",
 					"body2.sx": 1,
 					"body2.sy": 1,
 					"body2.sz": 1
