@@ -88,6 +88,14 @@
 											]
 										}
 									]
+								},
+								{
+									"id": "Extra",
+									"invertAxis": "xy",
+									"translate": [0, 7.75, 4],
+									"boxes": [
+										{"coordinates": [-3.5, 0.25, -4, 7, 6, 0], "textureOffset": [50, 45]}
+									]
 								}
 							]
 						},
@@ -214,15 +222,6 @@
 			"id": "tail",
 			"invertAxis": "xy",
 			"translate": [0, 0, 0]
-		},
-		{
-			"part": "Extra",
-			"id": "Extra",
-			"invertAxis": "xy",
-			"translate": [0, -23.75, -10],
-			"boxes": [
-				{"coordinates": [-3.5, 24, 6, 7, 6, 0], "textureOffset": [50, 45]}
-			]
 		}
 	]
 }

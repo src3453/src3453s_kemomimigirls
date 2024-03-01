@@ -59,11 +59,15 @@
 							"id": "real_head",
 							"invertAxis": "xy",
 							"translate": [0, 24, 0],
-							"boxes": [
-								{"coordinates": [-4, 0, -4, 8, 8, 8], "textureOffset": [0, 16]},
-								{"coordinates": [-4, 0, -4, 8, 8, 8], "textureOffset": [0, 0], "sizeAdd": 0.25}
-							],
 							"submodels": [
+								{
+									"id": "Extra",
+									"invertAxis": "xy",
+									"translate": [0, 7.75, 4],
+									"boxes": [
+										{"coordinates": [-3.5, 0.25, -4, 7, 6, 0], "textureOffset": [50, 45]}
+									]
+								},
 								{
 									"id": "LeftEar",
 									"invertAxis": "xy",
@@ -125,6 +129,10 @@
 										}
 									]
 								}
+							],
+							"boxes": [
+								{"coordinates": [-4, 0, -4, 8, 8, 8], "textureOffset": [0, 16]},
+								{"coordinates": [-4, 0, -4, 8, 8, 8], "textureOffset": [0, 0], "sizeAdd": 0.25}
 							]
 						},
 						{
@@ -215,15 +223,6 @@
 					"body2.sy": 0.95,
 					"body2.sz": 0.95
 				}
-			]
-		},
-		{
-			"part": "Extra",
-			"id": "Extra",
-			"invertAxis": "xy",
-			"translate": [0, -23.75, -10],
-			"boxes": [
-				{"coordinates": [-3.5, 24, 6, 7, 6, 0], "textureOffset": [50, 45]}
 			]
 		}
 	]
