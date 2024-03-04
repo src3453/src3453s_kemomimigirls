@@ -90,6 +90,22 @@
 									]
 								},
 								{
+									"id": "Sleep1",
+									"invertAxis": "xy",
+									"translate": [0, -16, -10],
+									"boxes": [
+										{"coordinates": [-3, 17, 6.01, 6, 2, 0], "textureOffset": [16, 32]}
+									]
+								},
+								{
+									"id": "Sleep2",
+									"invertAxis": "xy",
+									"translate": [0, -16, -10],
+									"boxes": [
+										{"coordinates": [-1, 16, 6.01, 2, 1, 0], "textureOffset": [24, 34]}
+									]
+								},
+								{
 									"id": "Extra",
 									"invertAxis": "xy",
 									"translate": [0, 7.75, 4],
@@ -188,6 +204,8 @@
 					"LeftEar.rz": "torad(30) + sin(var.time * 0.1) * 0.1",
 					"RightEar.rz": "torad(-30) + sin(var.time * 0.08) * -0.1",
 					"Extra.rz": "sin(var.time * 0.06) * 0.05",
+					"Sleep1.tz": "-10-is_sleeping.tx*0.02-if(var.time%80<3,(1-is_sleeping.tx)*0.02,0)",
+					"Sleep2.tz": "-10-is_sleeping.tx*0.02*if(var.time%120>90,1,0)",
 					"body2.sx": 0.9,
 					"body2.sy": 0.9,
 					"body2.sz": 0.9
