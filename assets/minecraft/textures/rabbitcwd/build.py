@@ -32,7 +32,7 @@ for head_name in heads:
             for y in range(costume.shape[0]):
                 for x in range(costume.shape[1]):
                     if all(costume[y,x,:] == mask_colors[0]):
-                        costume[y,x,:] = colors[color_name][0]
+                        costume[y,x,:] = colors[color_name]
                     if all(costume[y,x,:] == mask_colors[1]):
                         costume[y,x,:] = np.clip(np.array(colors[color_name][0])*1.02,0,255)
                     if all(costume[y,x,:] == mask_colors[2]):
