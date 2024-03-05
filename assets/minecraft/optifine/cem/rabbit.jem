@@ -210,7 +210,7 @@
 					"real_tail.ry": "tail.ry*0.5",
 					"real_head.rx": "head.rx",
 					"real_head.ry": "head.ry+if(is_sleeping.tx == 1,torad(90),0)",
-					"real_head.rz": "head.rz + sin(var.time * 0.03) * (0.1 * if(is_tamed,1,0))",
+					"real_head.rz": "head.rz",
 					"body2.ty": "if(is_sitting,-11.5,-20)+28",
 					"body2.tz": "0",
 					"LeftEar.rx": "left_ear.rx",
