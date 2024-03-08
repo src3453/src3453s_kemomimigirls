@@ -2,7 +2,7 @@ import os
 import cv2
 import numpy as np
 
-HEADS_DIR = "/home/src3453/.local/share/multimc/instances/1.20.1/.minecraft/resourcepacks/src3453s_foxgirl/assets/minecraft/textures/rabbitcwd/heads"
+HEADS_DIR = "/home/src3453/.local/share/multimc/instances/1.20.1/.minecraft/resourcepacks/src3453s_foxgirl/assets/minecraft/textures/src/rabbit/heads"
 
 heads = os.listdir(HEADS_DIR)
 colors = {}

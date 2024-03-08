@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 HEADS_DIR = "/home/src3453/.local/share/multimc/instances/1.20.1/.minecraft/resourcepacks/src3453s_foxgirl/assets/minecraft/textures/entity/wolf"
-SLEEP_DIR = "/home/src3453/.local/share/multimc/instances/1.20.1/.minecraft/resourcepacks/src3453s_foxgirl/assets/minecraft/textures/catcwd/sleep"
+SLEEP_DIR = "/home/src3453/.local/share/multimc/instances/1.20.1/.minecraft/resourcepacks/src3453s_foxgirl/assets/minecraft/textures/src/cat/sleep"
 
 heads = os.listdir(HEADS_DIR)
 sleep_path = os.listdir(SLEEP_DIR)[0]

@@ -2,8 +2,8 @@ import os
 import cv2
 import numpy as np
 
-HEADS_DIR = "/home/src3453/.local/share/multimc/instances/1.20.1/.minecraft/resourcepacks/src3453s_foxgirl/assets/minecraft/textures/rabbitcwd/heads"
-COSTUMES_DIR = "/home/src3453/.local/share/multimc/instances/1.20.1/.minecraft/resourcepacks/src3453s_foxgirl/assets/minecraft/textures/rabbitcwd/costumes"
+HEADS_DIR = "/home/src3453/.local/share/multimc/instances/1.20.1/.minecraft/resourcepacks/src3453s_foxgirl/assets/minecraft/textures/src/rabbit/heads"
+COSTUMES_DIR = "/home/src3453/.local/share/multimc/instances/1.20.1/.minecraft/resourcepacks/src3453s_foxgirl/assets/minecraft/textures/src/rabbit/costumes"
 OUTPUT_DIR = "/home/src3453/.local/share/multimc/instances/1.20.1/.minecraft/resourcepacks/src3453s_foxgirl/assets/minecraft/optifine/random/entity/rabbit/"
 
 colors = {'salt': [(149, 149, 149, 255)], 'caerbannog': [(217, 217, 217, 255)], 'toast': [(48, 48, 48, 255)], 'brown': [(88, 48, 38, 255)], 'gold': [(255, 191, 137, 255), (255, 225, 151, 255)], 'black': [(37, 14, 14, 255)], 'white': [(217, 217, 217, 255)], 'white_splotched': [(173, 126, 185, 255)]}
