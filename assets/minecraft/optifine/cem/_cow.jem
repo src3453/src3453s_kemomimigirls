@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"texture": "textures/entity/creeper/creeper.png",
+	"texture": "textures/entity/cow/cow.png",
 	"textureSize": [64, 128],
 	"models": [
 		{
@@ -34,27 +34,15 @@
 			"translate": [0, -26, 2]
 		},
 		{
-			"part": "tail",
-			"id": "tail",
-			"invertAxis": "xy",
-			"translate": [0, 0, 0]
-		},
-		{
-			"part": "mane",
-			"id": "mane",
-			"invertAxis": "xy",
-			"translate": [0, 0, 0]
-		},
-		{
 			"part": "body",
 			"id": "body",
 			"invertAxis": "xy",
-			"translate": [0, 0, -6],
+			"translate": [0, 0, -8],
 			"submodels": [
 				{
 					"id": "body2",
 					"invertAxis": "xy",
-					"translate": [0, -8, 0],
+					"translate": [0, -8, 6],
 					"submodels": [
 						{
 							"id": "real_head",
@@ -66,64 +54,44 @@
 							],
 							"submodels": [
 								{
+									"id": "Sleep1",
+									"invertAxis": "xy",
+									"translate": [0, -16, -10],
+									"boxes": [
+										{"coordinates": [-3, 17, 6.01, 6, 2, 0], "textureOffset": [16, 32]}
+									]
+								},
+								{
+									"id": "Sleep2",
+									"invertAxis": "xy",
+									"translate": [0, -16, -10],
+									"boxes": [
+										{"coordinates": [-1, 16, 6.01, 2, 1, 0], "textureOffset": [24, 34]}
+									]
+								},
+								{
+									"id": "Extra",
+									"invertAxis": "xy",
+									"translate": [0, 7.75, 4],
+									"boxes": [
+										{"coordinates": [-3.5, 0.25, -4, 7, 6, 0], "textureOffset": [50, 45]}
+									]
+								},
+								{
 									"id": "LeftEar",
 									"invertAxis": "xy",
-									"translate": [-2.25, 6.75, -2],
-									"rotate": [-10, 0, 30],
+									"translate": [-3.25, 6.75, -2.5],
 									"boxes": [
-										{"coordinates": [-0.45, -0.70073, -1.21109, 1, 5, 2], "textureOffset": [54, 0]}
-									],
-									"submodels": [
-										{
-											"id": "LeftEar3",
-											"invertAxis": "xy",
-											"translate": [2.35, -0.3473, 1.96962],
-											"rotate": [0, 0, 20],
-											"boxes": [
-												{"coordinates": [-1.23791, -0.04373, -2.8707, 1, 5, 2], "textureOffset": [48, 0], "sizeAdd": 0.2}
-											]
-										},
-										{
-											"id": "LeftEar2",
-											"invertAxis": "xy",
-											"translate": [-0.65, -0.6473, 1.96962],
-											"rotate": [0, 0, -20],
-											"boxes": [
-												{"coordinates": [-1.48019, -1.34112, -2.8707, 1, 6, 2], "textureOffset": [58, 5], "sizeAdd": 0.2}
-											]
-										}
+										{"coordinates": [0.55, -1.70073, -0.46109, 1, 4, 1], "textureOffset": [55, 1]}
 									]
 								},
 								{
 									"id": "RightEar",
 									"invertAxis": "xy",
 									"mirrorTexture": "u",
-									"translate": [2.25, 6.75, -2],
-									"rotate": [-10, 0, -30],
+									"translate": [2.25, 6.75, -2.25],
 									"boxes": [
-										{"coordinates": [-0.55, -0.70073, -1.21109, 1, 5, 2], "textureOffset": [54, 0]}
-									],
-									"submodels": [
-										{
-											"id": "RightEar3",
-											"invertAxis": "xy",
-											"mirrorTexture": "u",
-											"translate": [-2.35, -0.3473, 1.96962],
-											"rotate": [0, 0, -20],
-											"boxes": [
-												{"coordinates": [0.23791, -0.04373, -2.8707, 1, 5, 2], "textureOffset": [48, 0], "sizeAdd": 0.2}
-											]
-										},
-										{
-											"id": "RightEar2",
-											"invertAxis": "xy",
-											"mirrorTexture": "u",
-											"translate": [0.65, -0.6473, 1.96962],
-											"rotate": [0, 0, 20],
-											"boxes": [
-												{"coordinates": [0.48019, -1.34112, -2.8707, 1, 6, 2], "textureOffset": [58, 5], "sizeAdd": 0.2}
-											]
-										}
+										{"coordinates": [-0.55, -1.70073, -0.71109, 1, 4, 1], "textureOffset": [55, 1]}
 									]
 								}
 							]
@@ -174,15 +142,6 @@
 							]
 						},
 						{
-							"id": "real_tail",
-							"invertAxis": "xy",
-							"translate": [0.5, 12.5, 1],
-							"rotate": [10, 0, 0],
-							"boxes": [
-								{"coordinates": [-1.5, -1.5, 0.5, 2, 2, 12], "textureOffset": [0, 59]}
-							]
-						},
-						{
 							"id": "is_sleeping",
 							"invertAxis": "xy",
 							"translate": [0, 0, 0]
@@ -192,6 +151,7 @@
 			],
 			"animations": [
 				{
+					"var.time": "var.time+0.3*(random()*0.4+0.8)*frame_time/0.030",
 					"is_sleeping.tx": "if((body.rz != 0), 1 , 0)",
 					"body.rx": 0,
 					"body.ry": "torad(-90)*is_sleeping.tx",
@@ -202,15 +162,14 @@
 					"left_leg.ry": "if(is_sitting,-0.05,0)",
 					"right_arm.rx": "0.5*leg3.rx+if(is_sitting,torad(180),0)",
 					"left_arm.rx": "0.5*leg4.rx+if(is_sitting,torad(180),0)",
-					"real_tail.rx": "clamp(0.15 + sin(age * 0.075) * 0.2,torad(-70),torad(70))-torad(15)",
-					"real_tail.ry": "tail.ry*0.5",
 					"real_head.rx": "head.rx",
 					"real_head.ry": "head.ry+if(is_sleeping.tx == 1,torad(90),0)",
-					"real_head.rz": "head.rz + sin(age * 0.03) * (0.1 * if(is_tamed,1,0))",
+					"real_head.rz": "head.rz + sin(var.time * 0.03) * (0.1 * if(is_tamed,1,0))",
 					"body2.ty": "if(is_sitting,-11.5,-20)+28",
 					"body2.tz": "if(is_sitting,12,6)",
-					"LeftEar.rz": "torad(30) + sin(age * 0.1) * 0.1",
-					"RightEar.rz": "torad(-30) + sin(age * 0.08) * -0.1",
+					"Extra.rz": "sin(var.time * 0.06) * 0.05",
+					"Sleep1.tz": "-10-is_sleeping.tx*0.02-if(var.time%80<3,(1-is_sleeping.tx)*0.02,0)",
+					"Sleep2.tz": "-10-is_sleeping.tx*0.02*if(var.time%120>90,1,0)",
 					"body2.sx": 0.95,
 					"body2.sy": 0.95,
 					"body2.sz": 0.95

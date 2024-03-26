@@ -195,7 +195,7 @@
 			],
 			"animations": [
 				{
-					"var.time": "var.time+0.3*(random()*0.4+0.8)",
+					"var.time": "var.time+0.3*(random()*0.4+0.8)*frame_time/0.030",
 					"is_sleeping.tx": "if((body.rz != 0), 1 , 0)",
 					"body.rx": 0,
 					"body.ry": "torad(-90)*is_sleeping.tx",
