@@ -6,7 +6,7 @@ HEADS_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_f
 COSTUMES_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\textures\src\fox\costumes"
 BOTTOMS_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\textures\src\fox\bottoms"
 SLEEP_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\textures\src\fox\sleep"
-OUTPUT_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\textures\src\fox\outputs\\"
+OUTPUT_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\optifine\random\entity\fox\\"
 
 colors = {
     "orange":[(0xff,0x9c,0x1e,255)],
@@ -59,13 +59,10 @@ for head_name in heads:
                             result[y,x,:] = sleep[y,x,:]
                 _index = str(index)
                 cv2.imwrite(os.path.join(OUTPUT_DIR+"fox"+_index+".png"),result)
-                print("fox"+_index+".png")
                 cv2.imwrite(os.path.join(OUTPUT_DIR+"fox_sleep"+_index+".png"),result)
-                print("fox_sleep"+_index+".png")
                 cv2.imwrite(os.path.join(OUTPUT_DIR+"snow_fox"+_index+".png"),result)
-                print("snow_fox"+_index+".png")
                 cv2.imwrite(os.path.join(OUTPUT_DIR+"snow_fox_sleep"+_index+".png"),result)
-                print("snow_fox_sleep"+_index+".png")
+                print("fox"+_index+".png")
                 cv2.imshow("result",result)
                 cv2.waitKey(1)
                 index+=1
