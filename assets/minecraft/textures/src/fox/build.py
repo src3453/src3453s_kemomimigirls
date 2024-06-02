@@ -8,7 +8,7 @@ BOTTOMS_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s
 SLEEP_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\textures\src\fox\sleep"
 OUTPUT_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\optifine\random\entity\fox\\"
 
-colors = {
+"""colors = {
     "orange":[(0xff,0x9c,0x1e,255)],
     "arctic":[(0xd4,0xe8,0xee,255)],
     "black" :[(0x26,0x1b,0x1b,255)],
@@ -17,7 +17,7 @@ colors = {
     "brown" :[(0x79,0x34,0x1a,255)],
     "silver":[(0xb9,0xb9,0xb9,255)],
     "lavender":[(0xc5,0x7f,0xeb,255)],
-    }
+    }"""
 mask_colors = [(255,0,255,255)]
 
 heads = os.listdir(HEADS_DIR)
@@ -39,7 +39,7 @@ for head_name in heads:
                 for y in range(costume.shape[0]):
                     for x in range(costume.shape[1]):
                         if all(costume[y,x,:] == mask_colors[0]):
-                            costume[y,x,:] = colors[color_name][0]
+                            costume[y,x,:] = head[16,16,[2,1,0,3]]#colors[color_name][0]
                 costume = costume[:,:,[2,1,0,3]]
                 result = head
                 for y in range(result.shape[0]):
