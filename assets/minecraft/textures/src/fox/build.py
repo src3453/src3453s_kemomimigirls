@@ -49,6 +49,8 @@ for head_name in heads:
                             result[y,x,:] = bottoms_img[y,x,:]
                 for y in range(result.shape[0]):
                     for x in range(result.shape[1]):
+                        if all(costume[y,x,:] == (0,255,0,255)):
+                            costume[y,x,:] = (0,0,0,0)
                         if costume[y,x,3] != 0:
                             costume[y,x,3] = 255
                             result[y,x,:] = costume[y,x,:]
