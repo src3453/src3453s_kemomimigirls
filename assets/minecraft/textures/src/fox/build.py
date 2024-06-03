@@ -50,6 +50,7 @@ for head_name in heads:
                 for y in range(result.shape[0]):
                     for x in range(result.shape[1]):
                         if all(costume[y,x,:] == (0,255,0,255)):
+                            result[y,x,:] = (0,0,0,0)
                             costume[y,x,:] = (0,0,0,0)
                         if costume[y,x,3] != 0:
                             costume[y,x,3] = 255
@@ -64,9 +65,9 @@ for head_name in heads:
                 cv2.imwrite(os.path.join(OUTPUT_DIR+"fox_sleep"+_index+".png"),result)
                 cv2.imwrite(os.path.join(OUTPUT_DIR+"snow_fox"+_index+".png"),result)
                 cv2.imwrite(os.path.join(OUTPUT_DIR+"snow_fox_sleep"+_index+".png"),result)
-                print("fox"+_index+".png")
-                cv2.imshow("result",result)
-                cv2.waitKey(1)
+                print("fox"+_index+".png"+f" ({head_name:<16}, {costume_name:<24}, {bottoms_name:<24})")
+                #cv2.imshow("result",result)
+                #cv2.waitKey(1)
                 index+=1
 open(OUTPUT_DIR+"fox.properties","w").write(f"texture.1=1-{index-1}")
 print(f"write .properties {index-1}")
