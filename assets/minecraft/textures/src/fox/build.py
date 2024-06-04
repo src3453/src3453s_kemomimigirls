@@ -8,6 +8,7 @@ BOTTOMS_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s
 SLEEP_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\textures\src\fox\sleep"
 OUTPUT_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\optifine\random\entity\fox\\"
 
+
 """colors = {
     "orange":[(0xff,0x9c,0x1e,255)],
     "arctic":[(0xd4,0xe8,0xee,255)],

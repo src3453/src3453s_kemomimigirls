@@ -9,7 +9,6 @@
 			"translate": [0, 0, 0]
 		},
 		{
-			
 			"part": "body",
 			"id": "body",
 			"invertAxis": "xy",
