@@ -8,7 +8,6 @@ BOTTOMS_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s
 SLEEP_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\textures\src\fox\sleep"
 OUTPUT_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\optifine\random\entity\fox\\"
 
-
 """colors = {
     "orange":[(0xff,0x9c,0x1e,255)],
     "arctic":[(0xd4,0xe8,0xee,255)],
@@ -27,8 +26,8 @@ bottoms = os.listdir(BOTTOMS_DIR)
 sleeps = os.listdir(SLEEP_DIR)[0:1]
 index = 1 
 
-for head_name in heads:
-    for bottoms_name in bottoms:
+for j,head_name in enumerate(heads):
+    for bottoms_name in [bottoms[j%len(bottoms)]]:#bottoms:
         for costume_name in costumes:
             for i,sleep_name in enumerate(sleeps):
                 head = cv2.imread(os.path.join(HEADS_DIR,head_name),cv2.IMREAD_UNCHANGED)
