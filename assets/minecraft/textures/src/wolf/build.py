@@ -78,7 +78,10 @@ for j,head_name in enumerate(heads):
                         if sleep[y,x,3] != 0:
                             sleep[y,x,3] = 255
                             result[y,x,:] = sleep[y,x,:]
-                _index = str(index)
+                if index != 1:
+                    _index = str(index)
+                else:
+                    _index = ""
                 cv2.imwrite(os.path.join(OUTPUT_DIR,""+head_name.split(".")[0]+str(_index+".png")),result)
                 cv2.imwrite(os.path.join(OUTPUT_DIR,""+head_name.split(".")[0]+str("_angry"+_index+".png")),result)
                 cv2.imwrite(os.path.join(OUTPUT_DIR,""+head_name.split(".")[0]+str("_tame"+_index+".png")),result)
