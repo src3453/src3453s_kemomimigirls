@@ -10,6 +10,7 @@ BOTTOMS_DIR = BASE_DIR + r"\bottoms"
 SLEEP_DIR = BASE_DIR + r"\sleep"
 SPECIAL_DIR = BASE_DIR + r"\special"
 OUTPUT_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\optifine\random\entity\wolf\\"
+OUTPUT_DIR_VANILLA = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\textures\entity\wolf"
 
 """colors = {
     "orange":[(0xff,0x9c,0x1e,255)],
@@ -82,6 +83,9 @@ for j,head_name in enumerate(heads):
                     _index = str(index)
                 else:
                     _index = ""
+                    cv2.imwrite(os.path.join(OUTPUT_DIR_VANILLA,""+head_name.split(".")[0]+str(_index+".png")),result)
+                    cv2.imwrite(os.path.join(OUTPUT_DIR_VANILLA,""+head_name.split(".")[0]+str("_angry"+_index+".png")),result)
+                    cv2.imwrite(os.path.join(OUTPUT_DIR_VANILLA,""+head_name.split(".")[0]+str("_tame"+_index+".png")),result)
                 cv2.imwrite(os.path.join(OUTPUT_DIR,""+head_name.split(".")[0]+str(_index+".png")),result)
                 cv2.imwrite(os.path.join(OUTPUT_DIR,""+head_name.split(".")[0]+str("_angry"+_index+".png")),result)
                 cv2.imwrite(os.path.join(OUTPUT_DIR,""+head_name.split(".")[0]+str("_tame"+_index+".png")),result)
