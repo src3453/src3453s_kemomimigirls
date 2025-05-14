@@ -2,10 +2,10 @@ import os
 import cv2
 import numpy as np
 
-HEADS_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\textures\src\cat\heads"
-COSTUMES_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\textures\src\cat\costumes"
-SLEEP_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\textures\src\cat\sleep"
-OUTPUT_DIR = r"C:\Users\y2k34\AppData\Roaming\.minecraft\resourcepacks\src3453s_foxgirl\assets\minecraft\optifine\random\entity\cat\\"
+HEADS_DIR = r".\heads"
+COSTUMES_DIR = r".\costumes"
+SLEEP_DIR = r".\sleep"
+OUTPUT_DIR = r"..\..\..\optifine\random\entity\cat\\"
 
 colors = {"all_black":[(25,18,18,255)],
 "british_shorthair":[(165,165,165,255)],
